@@ -578,9 +578,9 @@
       <li><a href="#feedbacks" data-i18n="nav_feedbacks">Feedbacks</a></li>
       <li><a href="#contato" class="nav-cta" data-i18n="nav_cta">Falar comigo</a></li>
       <li style="display:flex;align-items:center;gap:8px;margin-left:8px;">
-        <button onclick="setLang('pt')" id="flag-pt" title="Português" style="background:none;border:none;cursor:pointer;font-size:1.4rem;opacity:1;transition:opacity 0.2s;padding:2px;">🇧🇷</button>
-        <button onclick="setLang('en')" id="flag-en" title="English" style="background:none;border:none;cursor:pointer;font-size:1.4rem;opacity:0.4;transition:opacity 0.2s;padding:2px;">🇺🇸</button>
-        <button onclick="setLang('es')" id="flag-es" title="Español" style="background:none;border:none;cursor:pointer;font-size:1.4rem;opacity:0.4;transition:opacity 0.2s;padding:2px;">🇪🇸</button>
+        <button onclick="setLang('pt')" id="flag-pt" title="Português" style="background:none;border:none;cursor:pointer;opacity:1;transition:opacity 0.2s;padding:2px;line-height:1;"><img src="https://flagcdn.com/w40/br.png" width="28" style="border-radius:3px;display:block;" /></button>
+        <button onclick="setLang('en')" id="flag-en" title="English" style="background:none;border:none;cursor:pointer;opacity:0.4;transition:opacity 0.2s;padding:2px;line-height:1;"><img src="https://flagcdn.com/w40/us.png" width="28" style="border-radius:3px;display:block;" /></button>
+        <button onclick="setLang('es')" id="flag-es" title="Español" style="background:none;border:none;cursor:pointer;opacity:0.4;transition:opacity 0.2s;padding:2px;line-height:1;"><img src="https://flagcdn.com/w40/es.png" width="28" style="border-radius:3px;display:block;" /></button>
       </li>
     </ul>
   </nav>
@@ -593,16 +593,16 @@
     <div class="hero-content">
       <div class="hero-tag" data-i18n="hero_tag">Editor de Vídeo · Direct Response</div>
       <h1 class="hero-title">
-        <span style="color:var(--white);">VÍDEOS</span><br>
-        <span style="color:var(--white);">QUE</span><br>
-        <span style="color:var(--purple-glow);">CONVERTEM.</span>
+        <span style="color:var(--white);" data-i18n="hero_line1">VÍDEOS</span><br>
+        <span style="color:var(--white);" data-i18n="hero_line2">QUE</span><br>
+        <span style="color:var(--purple-glow);" data-i18n="hero_line3">CONVERTEM.</span>
       </h1>
       <p class="hero-sub" data-i18n="hero_sub">
         Edição especializada em <strong>Direct Response</strong> — VSLs, ADs para Meta e TikTok com foco em <strong>engajamento e conversão</strong>.
       </p>
       <div class="hero-actions">
-        <a href="#portfolio" class="btn-primary">Ver portfólio</a>
-        <a href="#contato" class="btn-outline">Falar comigo</a>
+        <a href="#portfolio" class="btn-primary" data-i18n="hero_btn1">Ver portfólio</a>
+        <a href="#contato" class="btn-outline" data-i18n="hero_btn2">Falar comigo</a>
       </div>
       <div class="hero-stats">
         <div>
@@ -653,7 +653,7 @@
       </div>
       <div class="reveal">
         <div class="section-label" data-i18n="about_label">Quem sou eu</div>
-        <h2 class="section-title">Carlos<br><span style="color:var(--purple-glow)">Paschoalini</span></h2>
+        <h2 class="section-title" data-i18n="about_title">Carlos<br><span style="color:var(--purple-glow)">Paschoalini</span></h2>
         <p style="color:var(--gray);font-size:1rem;line-height:1.8;font-weight:300;margin-top:16px;">
           Sou editor de vídeo especializado em <strong style="color:var(--white)">Direct Response</strong> — o único formato de edição onde cada corte tem um objetivo: <strong style="color:var(--white)">prender atenção, gerar conexão e converter</strong>.
         </p>
@@ -666,7 +666,7 @@
           <span style="background:rgba(123,47,190,0.15);border:1px solid rgba(123,47,190,0.3);padding:9px 18px;border-radius:4px;font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple-glow);">TikTok</span>
           <span style="background:rgba(123,47,190,0.15);border:1px solid rgba(123,47,190,0.3);padding:9px 18px;border-radius:4px;font-size:0.75rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple-glow);">Direct Response</span>
         </div>
-        <a href="#contato" style="display:inline-block;margin-top:36px;background:var(--purple);color:var(--white);padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:600;font-size:0.9rem;letter-spacing:1px;">Falar comigo →</a>
+        <a href="#contato" id="about-cta" style="display:inline-block;margin-top:36px;background:var(--purple);color:var(--white);padding:14px 32px;border-radius:4px;text-decoration:none;font-weight:600;font-size:0.9rem;letter-spacing:1px;" data-i18n="about_cta">Falar comigo →</a>
       </div>
     </div>
   </section>
@@ -682,8 +682,8 @@
     <div class="services-grid reveal">
       <div class="service-card">
         <span class="service-icon">🎬</span>
-        <div class="service-name">VSL (Video Sales Letter)</div>
-        <p class="service-desc">Edições estruturadas para manter o espectador até o CTA, com pacing preciso, gráficos de retenção e storytelling de conversão.</p>
+        <div class="service-name" data-i18n="srv1_name">VSL (Video Sales Letter)</div>
+        <p class="service-desc" data-i18n="srv1_desc">Edições estruturadas para manter o espectador até o CTA, com pacing preciso, gráficos de retenção e storytelling de conversão.</p>
         <div class="service-tags">
           <span class="service-tag">Pacing</span>
           <span class="service-tag">Storytelling</span>
@@ -692,8 +692,8 @@
       </div>
       <div class="service-card">
         <span class="service-icon">📱</span>
-        <div class="service-name">ADs para Meta & TikTok</div>
-        <p class="service-desc">Criativos de alta performance para feed e stories — hooks impactantes nos primeiros 3 segundos para maximizar retenção e CPL.</p>
+        <div class="service-name" data-i18n="srv2_name">ADs para Meta & TikTok</div>
+        <p class="service-desc" data-i18n="srv2_desc">Criativos de alta performance para feed e stories — hooks impactantes nos primeiros 3 segundos para maximizar retenção e CPL.</p>
         <div class="service-tags">
           <span class="service-tag">Meta Ads</span>
           <span class="service-tag">TikTok</span>
@@ -702,8 +702,8 @@
       </div>
       <div class="service-card">
         <span class="service-icon">⚡</span>
-        <div class="service-name">Edição de Alta Conversão</div>
-        <p class="service-desc">Motion, legendas animadas, jump cuts estratégicos e sound design para manter atenção e impulsionar a taxa de conversão.</p>
+        <div class="service-name" data-i18n="srv3_name">Edição de Alta Conversão</div>
+        <p class="service-desc" data-i18n="srv3_desc">Motion, legendas animadas, jump cuts estratégicos e sound design para manter atenção e impulsionar a taxa de conversão.</p>
         <div class="service-tags">
           <span class="service-tag">Motion</span>
           <span class="service-tag">Sound Design</span>
@@ -719,7 +719,7 @@
   <section id="portfolio">
     <div class="section-header reveal">
       <div class="section-label" data-i18n="port_label">Trabalhos recentes</div>
-      <h2 class="section-title">Portfólio</h2>
+      <h2 class="section-title" data-i18n="port_title">Portfólio</h2>
       <p class="section-sub" data-i18n="port_sub">Exemplos de projetos entregues com foco em resultado e conversão.</p>
     </div>
     <div class="portfolio-grid reveal">
@@ -755,36 +755,36 @@
     <div class="feedbacks-grid reveal">
       <div class="feedback-card">
         <div class="feedback-stars">★★★★★</div>
-        <p class="feedback-quote">Cara ficou muito braba essa VSL. Tá muito bem fluida, não fica cansativa em nenhum momento, o dinamismo ta excelente! E você usou a IA muito bem nas ilustrações, ajudou bastante a visualizar o que tá sendo falado. Mandou bem demais mano, bom trabalho mesmo.</p>
+        <p class="feedback-quote" data-i18n="fb1_quote">Cara ficou muito braba essa VSL. Tá muito bem fluida, não fica cansativa em nenhum momento, o dinamismo ta excelente! E você usou a IA muito bem nas ilustrações, ajudou bastante a visualizar o que tá sendo falado. Mandou bem demais mano, bom trabalho mesmo.</p>
         <div class="feedback-author">
           <div class="author-avatar">RL</div>
           <div>
             <div class="author-name">Ruan L.</div>
-            <div class="author-role">Copywriter</div>
+            <div class="author-role" data-i18n="fb1_role">Copywriter</div>
           </div>
         </div>
       </div>
 
       <div class="feedback-card">
         <div class="feedback-stars">★★★★★</div>
-        <p class="feedback-quote">Carlos, gostaria de te parabenizar pelo trabalho. O anúncio que você produziu fez uma diferença significativa nos nossos resultados. Após escalarmos a campanha, o CTR aumentou consideravelmente e as vendas estão crescendo de forma expressiva. O material está gerando resultados reais. Em breve, entrarei em contato para alinharmos novos projetos.</p>
+        <p class="feedback-quote" data-i18n="fb2_quote">Carlos, gostaria de te parabenizar pelo trabalho. O anúncio que você produziu fez uma diferença significativa nos nossos resultados. Após escalarmos a campanha, o CTR aumentou consideravelmente e as vendas estão crescendo de forma expressiva. O material está gerando resultados reais. Em breve, entrarei em contato para alinharmos novos projetos.</p>
         <div class="feedback-author">
           <div class="author-avatar">LO</div>
           <div>
             <div class="author-name">Leonardo O.</div>
-            <div class="author-role">Gestor de Tráfego</div>
+            <div class="author-role" data-i18n="fb2_role">Gestor de Tráfego</div>
           </div>
         </div>
       </div>
 
       <div class="feedback-card">
         <div class="feedback-stars">★★★★★</div>
-        <p class="feedback-quote">Curti demais mano, a qualidade tá monstra, nível altíssimo tá doido!! Dá pra ver o capricho em cada detalhe. Parabéns, ficou brabo!!</p>
+        <p class="feedback-quote" data-i18n="fb3_quote">Curti demais mano, a qualidade tá monstra, nível altíssimo tá doido!! Dá pra ver o capricho em cada detalhe. Parabéns, ficou brabo!!</p>
         <div class="feedback-author">
           <div class="author-avatar">ML</div>
           <div>
             <div class="author-name">Marcos L.</div>
-            <div class="author-role">CEO · Athenis Marketing</div>
+            <div class="author-role" data-i18n="fb3_role">CEO · Athenis Marketing</div>
           </div>
         </div>
       </div>
@@ -797,7 +797,7 @@
   <section id="contato">
     <div class="reveal">
       <div class="section-label" style="text-align:center" data-i18n="contact_label">Contato</div>
-      <h2 class="section-title">Pronto para<br><span class="contact-highlight">converter mais?</span></h2>
+      <h2 class="section-title" data-i18n="contact_title">Pronto para<br><span class="contact-highlight">converter mais?</span></h2>
       <p class="contact-desc" data-i18n="contact_desc">Me conta seu projeto e eu te mostro como a edição certa pode transformar seus resultados.</p>
     </div>
     <div class="contact-box reveal">
@@ -805,20 +805,20 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" data-i18n="form_name">Seu nome</label>
-            <input type="text" class="form-input" placeholder="Ex: João Silva" />
+            <input type="text" class="form-input" placeholder="Ex: João Silva" id="ph-name" />
           </div>
           <div class="form-group">
             <label class="form-label" data-i18n="form_contact">WhatsApp ou E-mail</label>
-            <input type="text" class="form-input" placeholder="(11) 99999-9999" />
+            <input type="text" class="form-input" placeholder="(11) 99999-9999" id="ph-contact" />
           </div>
         </div>
         <div class="form-group">
           <label class="form-label" data-i18n="form_project">Tipo de projeto</label>
-          <input type="text" class="form-input" placeholder="Ex: VSL para lançamento de curso, AD para Meta..." />
+          <input type="text" class="form-input" placeholder="Ex: VSL para lançamento de curso, AD para Meta..." id="ph-project" />
         </div>
         <div class="form-group">
           <label class="form-label" data-i18n="form_more">Me conta mais</label>
-          <textarea class="form-textarea" placeholder="Descreva seu projeto, nicho, objetivo..."></textarea>
+          <textarea class="form-textarea" placeholder="Descreva seu projeto, nicho, objetivo..." id="ph-more"></textarea>
         </div>
         <button class="form-submit">Enviar mensagem →</button>
       </div>
@@ -942,29 +942,52 @@
         nav_feedbacks: "Feedbacks",
         nav_cta: "Falar comigo",
         hero_tag: "Editor de Vídeo · Direct Response",
+        hero_line1: "VÍDEOS",
+        hero_line2: "QUE",
+        hero_line3: "CONVERTEM.",
+        hero_btn1: "Ver portfólio",
+        hero_btn2: "Falar comigo",
         hero_sub: `Edição especializada em <strong>Direct Response</strong> — VSLs, ADs para Meta e TikTok com foco em <strong>engajamento e conversão</strong>.`,
         stat1: "Projetos entregues",
         stat2: "Foco em conversão",
         stat3: "Anos de experiência",
         about_label: "Quem sou eu",
+        about_title: `Carlos<br><span style="color:var(--purple-glow)">Paschoalini</span>`,
         about_p1: `Sou editor de vídeo especializado em <strong style="color:var(--white)">Direct Response</strong> — o único formato de edição onde cada corte tem um objetivo: <strong style="color:var(--white)">prender atenção, gerar conexão e converter</strong>.`,
         about_p2: `Trabalho com VSLs, ADs para <strong style="color:var(--white)">Meta e TikTok</strong>, com profundo entendimento de psicologia do consumidor, pacing e storytelling persuasivo.`,
         about_cta: "Falar comigo →",
         srv_label: "O que eu faço",
         srv_title: "Serviços focados<br>em resultado",
         srv_sub: "Cada edição é pensada estrategicamente para prender atenção, gerar conexão e converter.",
+        srv1_name: "VSL (Video Sales Letter)",
+        srv1_desc: "Edições estruturadas para manter o espectador até o CTA, com pacing preciso, gráficos de retenção e storytelling de conversão.",
+        srv2_name: "ADs para Meta & TikTok",
+        srv2_desc: "Criativos de alta performance para feed e stories — hooks impactantes nos primeiros 3 segundos para maximizar retenção e CPL.",
+        srv3_name: "Edição de Alta Conversão",
+        srv3_desc: "Motion, legendas animadas, jump cuts estratégicos e sound design para manter atenção e impulsionar a taxa de conversão.",
         port_label: "Trabalhos recentes",
+        port_title: "Portfólio",
         port_sub: "Exemplos de projetos entregues com foco em resultado e conversão.",
         fb_label: "Clientes",
         fb_title: "O que dizem sobre<br>meu trabalho",
         contact_label: "Contato",
-        contact_title: "Pronto para<br><span class=\"contact-highlight\">converter mais?</span>",
+        contact_title: `Pronto para<br><span class="contact-highlight">converter mais?</span>`,
         contact_desc: "Me conta seu projeto e eu te mostro como a edição certa pode transformar seus resultados.",
         form_name: "Seu nome",
         form_contact: "WhatsApp ou E-mail",
         form_project: "Tipo de projeto",
         form_more: "Me conta mais",
         form_submit: "Enviar mensagem →",
+        ph_name: "Ex: João Silva",
+        ph_contact: "(11) 99999-9999",
+        ph_project: "Ex: VSL para lançamento de curso, AD para Meta...",
+        ph_more: "Descreva seu projeto, nicho, objetivo...",
+                fb1_quote: "Cara ficou muito braba essa VSL. Tá muito bem fluida, não fica cansativa em nenhum momento, o dinamismo ta excelente! E você usou a IA muito bem nas ilustrações, ajudou bastante a visualizar o que tá sendo falado. Mandou bem demais mano, bom trabalho mesmo.",
+        fb1_role: "Copywriter",
+        fb2_quote: "Carlos, gostaria de te parabenizar pelo trabalho. O anúncio que você produziu fez uma diferença significativa nos nossos resultados. Após escalarmos a campanha, o CTR aumentou consideravelmente e as vendas estão crescendo de forma expressiva. O material está gerando resultados reais. Em breve, entrarei em contato para alinharmos novos projetos.",
+        fb2_role: "Gestor de Tráfego",
+        fb3_quote: "Curti demais mano, a qualidade tá monstra, nível altíssimo tá doido!! Dá pra ver o capricho em cada detalhe. Parabéns, ficou brabo!!",
+        fb3_role: "CEO · Athenis Marketing",
         footer_copy: "© 2025 Carlos Paschoalini · Editor de Vídeo Direct Response",
         title: "Carlos Paschoalini — Editor de Vídeo DR"
       },
@@ -975,29 +998,52 @@
         nav_feedbacks: "Testimonials",
         nav_cta: "Contact me",
         hero_tag: "Video Editor · Direct Response",
+        hero_line1: "VIDEOS",
+        hero_line2: "THAT",
+        hero_line3: "CONVERT.",
+        hero_btn1: "View portfolio",
+        hero_btn2: "Contact me",
         hero_sub: `Specialized editing in <strong>Direct Response</strong> — VSLs, Ads for Meta and TikTok focused on <strong>engagement and conversion</strong>.`,
         stat1: "Projects delivered",
         stat2: "Conversion focused",
         stat3: "Years of experience",
         about_label: "Who I am",
+        about_title: `Carlos<br><span style="color:var(--purple-glow)">Paschoalini</span>`,
         about_p1: `I'm a video editor specialized in <strong style="color:var(--white)">Direct Response</strong> — the only editing format where every cut has a goal: <strong style="color:var(--white)">capture attention, build connection and convert</strong>.`,
         about_p2: `I work with VSLs, Ads for <strong style="color:var(--white)">Meta and TikTok</strong>, with a deep understanding of consumer psychology, pacing and persuasive storytelling.`,
         about_cta: "Contact me →",
         srv_label: "What I do",
         srv_title: "Services focused<br>on results",
         srv_sub: "Every edit is strategically crafted to capture attention, build connection and convert.",
+        srv1_name: "VSL (Video Sales Letter)",
+        srv1_desc: "Structured edits to keep viewers until the CTA, with precise pacing, retention graphics and conversion storytelling.",
+        srv2_name: "Ads for Meta & TikTok",
+        srv2_desc: "High-performance creatives for feed and stories — impactful hooks in the first 3 seconds to maximize retention and CPL.",
+        srv3_name: "High-Conversion Editing",
+        srv3_desc: "Motion, animated captions, strategic jump cuts and sound design to hold attention and boost conversion rates.",
         port_label: "Recent work",
+        port_title: "Portfolio",
         port_sub: "Project examples delivered with focus on results and conversion.",
         fb_label: "Clients",
         fb_title: "What they say about<br>my work",
         contact_label: "Contact",
-        contact_title: "Ready to<br><span class=\"contact-highlight\">convert more?</span>",
+        contact_title: `Ready to<br><span class="contact-highlight">convert more?</span>`,
         contact_desc: "Tell me about your project and I'll show you how the right edit can transform your results.",
         form_name: "Your name",
         form_contact: "WhatsApp or E-mail",
         form_project: "Project type",
         form_more: "Tell me more",
         form_submit: "Send message →",
+        ph_name: "Ex: John Smith",
+        ph_contact: "+1 (555) 000-0000",
+        ph_project: "Ex: VSL for course launch, Meta Ad...",
+        ph_more: "Describe your project, niche, goal...",
+                fb1_quote: "Man, this VSL came out amazing. It flows really well, never gets boring, the pacing is excellent! And you used AI really well in the illustrations, it helped a lot to visualize what's being said. You killed it man, great work.",
+        fb1_role: "Copywriter",
+        fb2_quote: "Carlos, I'd like to congratulate you on the work. The ad you produced made a significant difference in our results. After scaling the campaign, CTR increased considerably and sales are growing expressively. The material is generating real results. I'll be in touch soon to align new projects.",
+        fb2_role: "Traffic Manager",
+        fb3_quote: "Loved it man, the quality is insane, top level stuff!! You can see the attention to detail in every frame. Congrats, it's incredible!!",
+        fb3_role: "CEO · Athenis Marketing",
         footer_copy: "© 2025 Carlos Paschoalini · Direct Response Video Editor",
         title: "Carlos Paschoalini — DR Video Editor"
       },
@@ -1008,29 +1054,52 @@
         nav_feedbacks: "Testimonios",
         nav_cta: "Contáctame",
         hero_tag: "Editor de Video · Direct Response",
+        hero_line1: "VIDEOS",
+        hero_line2: "QUE",
+        hero_line3: "CONVIERTEN.",
+        hero_btn1: "Ver portafolio",
+        hero_btn2: "Contáctame",
         hero_sub: `Edición especializada en <strong>Direct Response</strong> — VSLs, ADs para Meta y TikTok con foco en <strong>engagement y conversión</strong>.`,
         stat1: "Proyectos entregados",
         stat2: "Foco en conversión",
         stat3: "Años de experiencia",
         about_label: "Quién soy",
+        about_title: `Carlos<br><span style="color:var(--purple-glow)">Paschoalini</span>`,
         about_p1: `Soy editor de video especializado en <strong style="color:var(--white)">Direct Response</strong> — el único formato de edición donde cada corte tiene un objetivo: <strong style="color:var(--white)">captar atención, generar conexión y convertir</strong>.`,
         about_p2: `Trabajo con VSLs, ADs para <strong style="color:var(--white)">Meta y TikTok</strong>, con profundo entendimiento de psicología del consumidor, pacing y storytelling persuasivo.`,
         about_cta: "Contáctame →",
         srv_label: "Lo que hago",
         srv_title: "Servicios enfocados<br>en resultados",
         srv_sub: "Cada edición está pensada estratégicamente para captar atención, generar conexión y convertir.",
+        srv1_name: "VSL (Video Sales Letter)",
+        srv1_desc: "Ediciones estructuradas para mantener al espectador hasta el CTA, con pacing preciso, gráficos de retención y storytelling de conversión.",
+        srv2_name: "ADs para Meta & TikTok",
+        srv2_desc: "Creativos de alto rendimiento para feed y stories — hooks impactantes en los primeros 3 segundos para maximizar retención y CPL.",
+        srv3_name: "Edición de Alta Conversión",
+        srv3_desc: "Motion, subtítulos animados, jump cuts estratégicos y sound design para mantener la atención e impulsar la tasa de conversión.",
         port_label: "Trabajos recientes",
+        port_title: "Portafolio",
         port_sub: "Ejemplos de proyectos entregados con foco en resultados y conversión.",
         fb_label: "Clientes",
         fb_title: "Lo que dicen sobre<br>mi trabajo",
         contact_label: "Contacto",
-        contact_title: "¿Listo para<br><span class=\"contact-highlight\">convertir más?</span>",
+        contact_title: `¿Listo para<br><span class="contact-highlight">convertir más?</span>`,
         contact_desc: "Cuéntame tu proyecto y te mostraré cómo la edición correcta puede transformar tus resultados.",
         form_name: "Tu nombre",
         form_contact: "WhatsApp o E-mail",
         form_project: "Tipo de proyecto",
         form_more: "Cuéntame más",
         form_submit: "Enviar mensaje →",
+        ph_name: "Ej: Juan García",
+        ph_contact: "+34 600 000 000",
+        ph_project: "Ej: VSL para lanzamiento de curso, AD para Meta...",
+        ph_more: "Describe tu proyecto, nicho, objetivo...",
+                fb1_quote: "Tío, este VSL quedó increíble. Fluye muy bien, no se hace aburrido en ningún momento, el dinamismo es excelente! Y usaste muy bien la IA en las ilustraciones, ayudó bastante a visualizar lo que se está diciendo. Lo hiciste genial, gran trabajo.",
+        fb1_role: "Copywriter",
+        fb2_quote: "Carlos, me gustaría felicitarte por el trabajo. El anuncio que produjiste hizo una diferencia significativa en nuestros resultados. Después de escalar la campaña, el CTR aumentó considerablemente y las ventas están creciendo de forma expresiva. El material está generando resultados reales. Pronto me pondré en contacto para alinear nuevos proyectos.",
+        fb2_role: "Gestor de Tráfico",
+        fb3_quote: "Me encantó tío, la calidad es brutal, nivel altísimo!! Se puede ver el cuidado en cada detalle. Felicidades, ¡quedó increíble!!",
+        fb3_role: "CEO · Athenis Marketing",
         footer_copy: "© 2025 Carlos Paschoalini · Editor de Video Direct Response",
         title: "Carlos Paschoalini — Editor de Video DR"
       }
@@ -1043,7 +1112,7 @@
       // Update all data-i18n elements
       document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
-        if (t[key]) el.innerHTML = t[key];
+        if (t[key] !== undefined) el.innerHTML = t[key];
       });
 
       // Update about paragraphs
@@ -1051,17 +1120,12 @@
       if (aboutPs[0]) aboutPs[0].innerHTML = t.about_p1;
       if (aboutPs[1]) aboutPs[1].innerHTML = t.about_p2;
 
-      // Update about CTA
-      const aboutCta = document.querySelector('#sobre a[href="#contato"]');
-      if (aboutCta) aboutCta.textContent = t.about_cta;
-
-      // Update contact title
-      const contactTitle = document.querySelector('#contato .section-title');
-      if (contactTitle) contactTitle.innerHTML = t.contact_title;
-
-      // Update form submit button
-      const submitBtn = document.querySelector('.form-submit');
-      if (submitBtn) submitBtn.textContent = t.form_submit;
+      // Update form placeholders
+      const phMap = { 'ph-name': 'ph_name', 'ph-contact': 'ph_contact', 'ph-project': 'ph_project', 'ph-more': 'ph_more' };
+      Object.entries(phMap).forEach(([id, key]) => {
+        const el = document.getElementById(id);
+        if (el) el.placeholder = t[key];
+      });
 
       // Update footer
       const footerCopy = document.querySelector('.footer-copy');
@@ -1073,7 +1137,6 @@
         if (btn) btn.style.opacity = l === lang ? '1' : '0.4';
       });
 
-      // Update html lang
       document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
     }
   </script>
