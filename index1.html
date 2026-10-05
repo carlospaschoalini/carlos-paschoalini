@@ -660,6 +660,7 @@
       <li><a href="#sobre" data-i18n="nav_sobre">Sobre</a></li><li><a href="#servicos" data-i18n="nav_servicos">Serviços</a></li>
       <li><a href="#portfolio" data-i18n="nav_portfolio">Portfólio</a></li>
       <li><a href="#feedbacks" data-i18n="nav_feedbacks">Feedbacks</a></li>
+      <li><a href="#precos" data-i18n="nav_precos">Preços</a></li>
       <li><a href="#contato" class="nav-cta" data-i18n="nav_cta">Falar comigo</a></li>
       <li style="display:flex;align-items:center;gap:8px;margin-left:8px;">
         <button onclick="setLang('pt')" id="flag-pt" title="Português" style="background:none;border:none;cursor:pointer;opacity:1;transition:opacity 0.2s;padding:2px;line-height:1;"><img src="https://flagcdn.com/w40/br.png" width="28" style="border-radius:3px;display:block;" /></button>
@@ -940,6 +941,197 @@
 
   <div class="divider"></div>
 
+  <!-- PRICING -->
+  <div class="divider"></div>
+  <section id="precos" style="padding:100px 60px;">
+    <style>
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-top: 56px;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: stretch;
+      }
+      .pricing-card {
+        display: flex;
+        flex-direction: column;
+      }
+      .pricing-cta {
+        margin-top: auto;
+      }
+      .pricing-card {
+        background: var(--card-bg);
+        border: 1px solid rgba(123,47,190,0.15);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: border-color 0.3s, box-shadow 0.3s;
+      }
+      .pricing-card:hover {
+        border-color: rgba(123,47,190,0.5);
+        box-shadow: 0 8px 40px rgba(123,47,190,0.2);
+      }
+      .pricing-card-header {
+        padding: 28px 32px 20px;
+        border-bottom: 1px solid rgba(123,47,190,0.1);
+        background: linear-gradient(135deg, rgba(123,47,190,0.08) 0%, transparent 100%);
+      }
+      .pricing-card-tag {
+        font-size: 0.68rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--purple-glow);
+        margin-bottom: 6px;
+      }
+      .pricing-card-title {
+        font-family: 'Syne', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--white);
+        margin-bottom: 8px;
+      }
+      .pricing-card-desc {
+        font-size: 0.82rem;
+        color: var(--gray);
+        line-height: 1.6;
+      }
+      .pricing-unit {
+        font-size: 0.72rem;
+        color: var(--purple-glow);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 14px 32px 8px;
+        opacity: 0.8;
+      }
+      .pricing-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 32px;
+        border-bottom: 1px solid rgba(123,47,190,0.06);
+        transition: background 0.2s, transform 0.2s;
+        cursor: default;
+      }
+      .pricing-row:last-child { border-bottom: none; }
+      .pricing-row:hover {
+        background: rgba(123,47,190,0.08);
+        transform: translateX(4px);
+      }
+      .pricing-row-label {
+        font-size: 0.88rem;
+        color: var(--gray);
+      }
+      .pricing-row-price {
+        font-family: 'Syne', sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--white);
+      }
+      .pricing-row.highlight {
+        background: rgba(123,47,190,0.1);
+        border-left: 2px solid var(--purple-glow);
+      }
+      .pricing-row.highlight .pricing-row-label { color: var(--white); }
+      .pricing-row.highlight .pricing-row-price { color: var(--purple-glow); }
+      .pricing-badge {
+        background: var(--purple);
+        color: var(--white);
+        font-size: 0.6rem;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        padding: 3px 8px;
+        border-radius: 20px;
+        margin-left: 8px;
+        font-weight: 600;
+      }
+      .pricing-cta {
+        padding: 20px 32px;
+        border-top: 1px solid rgba(123,47,190,0.1);
+      }
+      .pricing-cta a {
+        display: block;
+        text-align: center;
+        background: var(--purple);
+        color: var(--white);
+        text-decoration: none;
+        padding: 13px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: background 0.3s, box-shadow 0.3s;
+      }
+      .pricing-cta a:hover {
+        background: var(--purple-bright);
+        box-shadow: 0 0 24px rgba(157,78,221,0.4);
+      }
+      @media (max-width: 900px) {
+        .pricing-grid { grid-template-columns: 1fr; }
+        #precos { padding: 70px 24px; }
+        .pricing-card-header, .pricing-row, .pricing-unit, .pricing-cta { padding-left: 20px; padding-right: 20px; }
+      }
+    </style>
+
+    <div class="reveal">
+      <div class="section-label" data-i18n="pricing_label">Tabela de Preços</div>
+      <h2 class="section-title" data-i18n="pricing_title">Investimento</h2>
+      <p class="section-sub" data-i18n="pricing_sub">Preços transparentes e escalonáveis — quanto mais você produz, mais economiza por unidade.</p>
+    </div>
+
+    <div class="pricing-grid reveal">
+
+      <!-- CRIATIVOS & REELS -->
+      <div class="pricing-card">
+        <div class="pricing-card-header">
+          <div class="pricing-card-tag">01 — Criativos & Reels</div>
+          <div class="pricing-card-title">Criativos & Reels</div>
+          <div class="pricing-card-desc">Formatos curtos de alta conversão para anúncios e redes sociais.</div>
+        </div>
+        <div class="pricing-unit">Valor por unidade · Audiovisual</div>
+        <div class="pricing-row"><span class="pricing-row-label">1 – 4 un.</span><span class="pricing-row-price">R$ 103,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">5 – 9 un.</span><span class="pricing-row-price">R$ 98,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">10 – 14 un.</span><span class="pricing-row-price">R$ 93,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">15 – 19 un.</span><span class="pricing-row-price">R$ 88,00</span></div>
+        <div class="pricing-row highlight"><span class="pricing-row-label">20 – 24 un.<span class="pricing-badge">★ Mais Vendido</span></span><span class="pricing-row-price">R$ 83,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">25 – 29 un.</span><span class="pricing-row-price">R$ 78,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">30 – 34 un.</span><span class="pricing-row-price">R$ 73,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">35 – 39 un.</span><span class="pricing-row-price">R$ 68,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">40 – 50 un.</span><span class="pricing-row-price">R$ 63,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">51 – 99 un.</span><span class="pricing-row-price">R$ 58,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">+100 un.</span><span class="pricing-row-price">R$ 53,00</span></div>
+        <div class="pricing-cta">
+          <a href="https://wa.me/5543996437689?text=Oi%20Carlos!%0A%0AVim%20pelo%20seu%20site%2C%20gostaria%20de%20solicitar%20um%20criativo." target="_blank">Solicitar Orçamento →</a>
+        </div>
+      </div>
+
+      <!-- VSL -->
+      <div class="pricing-card">
+        <div class="pricing-card-header">
+          <div class="pricing-card-tag">02 — VSL</div>
+          <div class="pricing-card-title">Vídeo de Vendas (VSL)</div>
+          <div class="pricing-card-desc">Produções longas e imersivas, com retenção máxima.</div>
+        </div>
+        <div class="pricing-unit">Valor por minuto · Audiovisual</div>
+        <div class="pricing-row"><span class="pricing-row-label">1 – 10 min</span><span class="pricing-row-price">R$ 103,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">11 – 20 min</span><span class="pricing-row-price">R$ 98,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">21 – 30 min</span><span class="pricing-row-price">R$ 93,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">31 – 40 min</span><span class="pricing-row-price">R$ 88,00</span></div>
+        <div class="pricing-row highlight"><span class="pricing-row-label">41 – 50 min<span class="pricing-badge">★ Popular</span></span><span class="pricing-row-price">R$ 83,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">51 – 60 min</span><span class="pricing-row-price">R$ 78,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">61 – 70 min</span><span class="pricing-row-price">R$ 73,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">71 – 80 min</span><span class="pricing-row-price">R$ 68,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">81 – 90 min</span><span class="pricing-row-price">R$ 63,00</span></div>
+        <div class="pricing-row"><span class="pricing-row-label">+1h30</span><span class="pricing-row-price">R$ 58,00/min</span></div>
+        <div class="pricing-cta">
+          <a href="https://wa.me/5543996437689?text=Oi%20Carlos!%0A%0AVim%20pelo%20seu%20site%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20VSL." target="_blank">Solicitar Orçamento →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contato">
     <div class="reveal">
@@ -1003,7 +1195,7 @@
   <!-- FOOTER -->
   <footer>
     <img src="carlos-logo.png" alt="Carlos Paschoalini" style="height:60px;width:auto;display:block;" />
-    <div class="footer-copy">© 2025 Carlos Paschoalini · carlospaschoalini.com.br</div>
+    <div class="footer-copy">© 2026 Carlos Paschoalini · carlospaschoalini.com.br</div>
   </footer>
 
   <script>
@@ -1087,6 +1279,7 @@
         nav_servicos: "Serviços",
         nav_portfolio: "Portfólio",
         nav_feedbacks: "Feedbacks",
+        nav_precos: "Preços",
         nav_cta: "Falar comigo",
         hero_tag: "Editor de Vídeo · Direct Response",
         hero_line1: "VÍDEOS",
@@ -1135,7 +1328,10 @@
         fb2_role: "Gestor de Tráfego",
         fb3_quote: "Curti demais mano, a qualidade tá monstra, nível altíssimo tá doido!! Dá pra ver o capricho em cada detalhe. Parabéns, ficou brabo!!",
         fb3_role: "CEO · Athenis Marketing",
-        footer_copy: "© 2025 Carlos Paschoalini · carlospaschoalini.com.br",
+        pricing_label: "Tabela de Preços",
+        pricing_title: "Investimento",
+        pricing_sub: "Preços transparentes e escalonáveis — quanto mais você produz, mais economiza por unidade.",
+        footer_copy: "© 2026 Carlos Paschoalini · carlospaschoalini.com.br",
         title: "Carlos Paschoalini — Editor de Vídeo DR"
       },
       en: {
@@ -1143,6 +1339,7 @@
         nav_servicos: "Services",
         nav_portfolio: "Portfolio",
         nav_feedbacks: "Testimonials",
+        nav_precos: "Pricing",
         nav_cta: "Contact me",
         hero_tag: "Video Editor · Direct Response",
         hero_line1: "VIDEOS",
@@ -1191,7 +1388,10 @@
         fb2_role: "Traffic Manager",
         fb3_quote: "Loved it man, the quality is insane, top level stuff!! You can see the attention to detail in every frame. Congrats, it's incredible!!",
         fb3_role: "CEO · Athenis Marketing",
-        footer_copy: "© 2025 Carlos Paschoalini · carlospaschoalini.com.br",
+        pricing_label: "Pricing",
+        pricing_title: "Investment",
+        pricing_sub: "Transparent and scalable pricing — the more you produce, the more you save per unit.",
+        footer_copy: "© 2026 Carlos Paschoalini · carlospaschoalini.com.br",
         title: "Carlos Paschoalini — DR Video Editor"
       },
       es: {
@@ -1199,6 +1399,7 @@
         nav_servicos: "Servicios",
         nav_portfolio: "Portafolio",
         nav_feedbacks: "Testimonios",
+        nav_precos: "Precios",
         nav_cta: "Contáctame",
         hero_tag: "Editor de Video · Direct Response",
         hero_line1: "VIDEOS",
@@ -1247,7 +1448,10 @@
         fb2_role: "Gestor de Tráfico",
         fb3_quote: "Me encantó tío, la calidad es brutal, nivel altísimo!! Se puede ver el cuidado en cada detalle. Felicidades, ¡quedó increíble!!",
         fb3_role: "CEO · Athenis Marketing",
-        footer_copy: "© 2025 Carlos Paschoalini · carlospaschoalini.com.br",
+        pricing_label: "Tabla de Precios",
+        pricing_title: "Inversión",
+        pricing_sub: "Precios transparentes y escalables — cuanto más produces, más ahorras por unidad.",
+        footer_copy: "© 2026 Carlos Paschoalini · carlospaschoalini.com.br",
         title: "Carlos Paschoalini — Editor de Video DR"
       }
     };
@@ -1365,4 +1569,3 @@
 
 </body>
 </html>
-
